@@ -38,7 +38,18 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+@keyframes rot {
+        from {
+                transform: rotate(0deg)
+                           translate(-88px)
+                           rotate(360deg);
+        }
+        to {
+                transform: rotate(360deg)
+                           translate(-88px)
+                           rotate(360deg);
+        }
+}
 
 *{
 	margin: 0;
@@ -100,8 +111,8 @@ body{
 .menu__icon{
 	display: inline-block;
 	width: 12px;
-height: 19px;
-margin-right: 7px;
+	height: 19px;
+	margin-right: 7px;
 }
 .menu{
 	text-align: center;
@@ -167,6 +178,7 @@ margin-right: 7px;
 	list-style: none;
 }
 .numbers-li{
+	cursor: pointer;
 	display: flex;
     margin-bottom: 13px;
     justify-content: center;
@@ -180,6 +192,9 @@ margin-right: 7px;
 	font-family: Helvetica;
 	font-size: 24px;
 	font-weight: 700;
+}
+.numbers-li:hover{
+	box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
 }
 .arrow-left{
 	position: absolute;
@@ -205,6 +220,7 @@ margin-right: 7px;
 .vantage{
 	background: url(../pic/map.png) no-repeat bottom right;
     height: 1268px;
+    width: 100%;
 
 }
 .vantage-items{
@@ -225,6 +241,10 @@ margin-right: 7px;
 	width: 49%;
 
 	
+}
+.vantage__img{
+	width: 89px;
+	height: 76px;
 }
 .vantage-item2{
 	margin-top: 54px;
@@ -253,6 +273,8 @@ margin-right: 7px;
 	line-height: 24px;
 }
 .vantage__plane{
+	width: 717px;
+	height: 625px;
 	display: inline-block;
     position: absolute;
     top: 898px;
@@ -407,9 +429,23 @@ margin-right: 7px;
 	position: relative;
 	padding-left: 30px;
 	width: 348px;
-	height: 290px;
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.28);
 	background-color: #ffffff;
+}
+.reviews__hide{
+	display: none;
+    position: absolute;
+    top: 259px;
+    left: 0px;
+    z-index: 1;
+    width: 348px;
+    padding-left: 30px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.28);
+    background-color: #ffffff;
+}
+.reviews__block:hover .reviews__hide{
+	display: block;
+	height: auto;
 }
 .reviews__name{
 	position: relative;
@@ -419,14 +455,15 @@ margin-right: 7px;
 	font-size: 24px;
 	font-weight: 700;
 }
-.reviews__photo-1{
+.reviews__photo{
 	width: 150px;
 	height: 150px;
+	border-radius: 50%;
     position: absolute;
     top: -125px;
     right: 107px;
 }
-.reviews__photo-2{
+/*.reviews__photo-2{
 	width: 150px;
 	height: 150px;
     position: absolute;
@@ -439,17 +476,23 @@ margin-right: 7px;
     position: absolute;
     top: -125px;
     right: 107px;
-}
+}*/
 .reviews__photo-border{
+	width: 176px;
+	height: 176px;
 	position: absolute;
 	top: -138px;
     right: 95px;
+        
 }
 .reviews__plane-1{
 	position: absolute;
-	top: -136px;
-    right: 205px;
+	    top: -78px;
+    right: 164px;
+    
 }
+
+
 .reviews__date{
 	margin-top: 10px;
 	color: #999999;
@@ -591,10 +634,46 @@ margin-right: 7px;
 	left: 21px;
 }
 .vantage__quest{
+	position: relative;
 	cursor: pointer;
 	display: inline-block;
 	width: 22px;
 	height: 22px;
 	vertical-align: middle;
 	margin-left: 12px;
+}
+.hidden__message{
+	display: none;
+	width: 340px;
+	height: 118px;
+	padding-top: 21px;
+	padding-left: 14px;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.28);
+	border-radius: 5px;
+	border: 1px solid #f2f2f2;
+	background-color: #ffffff;
+	color: #353535;
+	font-size: 14px;
+	line-height: 24px;
+}
+.hidden__text{
+	font-family: "PT Sans";
+	font-weight: 400;
+}
+.hidden__text-b{
+	font-family: "PT Sans";
+	font-weight: 700;
+}
+.vantage__quest:hover .hidden__message{
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+.reviews__block:hover .reviews__photo{
+	box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
+}
+.reviews__block:hover .reviews__plane-1{
+	animation: 3s rot infinite linear;
+	
 }
