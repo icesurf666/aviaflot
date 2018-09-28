@@ -178,6 +178,7 @@ body{
 	list-style: none;
 }
 .numbers-li{
+
 	cursor: pointer;
 	display: flex;
     margin-bottom: 13px;
@@ -197,6 +198,7 @@ body{
 	box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
 }
 .arrow-left{
+	cursor: pointer;
 	position: absolute;
 	display: inline-block;
 	bottom: 26px;
@@ -204,6 +206,7 @@ body{
 
 }
 .arrow-right{
+	cursor: pointer;
 	position: absolute;
 	display: inline-block;
 	bottom: 7px;
@@ -488,7 +491,6 @@ body{
 .reviews__photo-b2{
 	width: 192px;
     height: 192px;
-    position: absolute;
     top: -146px;
     right: 87px;
         
@@ -679,4 +681,13 @@ body{
 .reviews__block:hover .reviews__photo-b{
 	animation: 5s rot infinite linear;
 	
+}
+.pag{
+	position: absolute;
+	bottom: 0;
+	right:0;
+}
+.home-slider{
+
+overflow-x: hidden;
 }

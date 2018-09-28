@@ -8,12 +8,26 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function() {
+$('.home-slider').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  dots: true,
+  appendDots: $('.paginat'),
+        customPaging: function(slider, i) {
+            
+            var numb = $(slider.$slides[i]).data('numb');
+            return '<li class="numbers-li">'+numb+'</li>';
+        }
 
-// $('.home').slick({
-//   dots: true,
-//   infinite: true,
-//   speed: 300,
-//   slidesToShow: 1,
-//   adaptiveHeight: true,
-  
-// });
+});
+ $(".arrow-left").click(function() {
+    $(".home-slider").slick("prev");
+  });
+  $(".arrow-right").click(function() {
+    $(".home-slider").slick("next");
+  });
+});
