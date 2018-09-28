@@ -41,12 +41,12 @@
 @keyframes rot {
         from {
                 transform: rotate(0deg)
-                           translate(-88px)
+                           translate(0px)
                            rotate(360deg);
         }
         to {
                 transform: rotate(360deg)
-                           translate(-88px)
+                           translate(0px)
                            rotate(360deg);
         }
 }
@@ -477,7 +477,7 @@ body{
     top: -125px;
     right: 107px;
 }*/
-.reviews__photo-border{
+.reviews__photo-b{
 	width: 176px;
 	height: 176px;
 	position: absolute;
@@ -485,12 +485,15 @@ body{
     right: 95px;
         
 }
-.reviews__plane-1{
-	position: absolute;
-	    top: -78px;
-    right: 164px;
-    
+.reviews__photo-b2{
+	width: 192px;
+    height: 192px;
+    position: absolute;
+    top: -146px;
+    right: 87px;
+        
 }
+
 
 
 .reviews__date{
@@ -673,7 +676,7 @@ body{
 .reviews__block:hover .reviews__photo{
 	box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
 }
-.reviews__block:hover .reviews__plane-1{
-	animation: 3s rot infinite linear;
+.reviews__block:hover .reviews__photo-b{
+	animation: 5s rot infinite linear;
 	
 }
