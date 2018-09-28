@@ -56,7 +56,9 @@ body{
 	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 	background-color: #ffffff;
 }
+.header{
 
+}
 .home{
 	background: url(../pic/bg.png) no-repeat top center;
 	width: 100%;
@@ -84,7 +86,8 @@ body{
 	font-weight: 400;
 }
 .menu__number{
-	display: inline-block;
+	display: flex;
+    align-items: center;
 	float: right;
 	margin-top: 28px;
 	color: #467bbf;
@@ -92,6 +95,13 @@ body{
 	font-size: 20px;
 	font-weight: 700;
 	text-transform: uppercase;
+	text-decoration: none;
+}
+.menu__icon{
+	display: inline-block;
+	width: 12px;
+height: 19px;
+margin-right: 7px;
 }
 .menu{
 	text-align: center;
@@ -134,6 +144,7 @@ body{
 	margin-left: 39px;
 }
 .home__btn{
+	cursor: pointer;
 	margin-top: 73px;
     margin-left: 170px;
 	color: #ffffff;
@@ -226,6 +237,8 @@ body{
 }
 .vantage__text-b{
 	margin-top: 21px;
+	color: #000000;
+	font-family: "PT Sans - Caption";
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 24px;
@@ -233,6 +246,10 @@ body{
 
 .vantage__text{
 	margin-top: 11px;
+	color: #353535;
+	font-family: "PT Sans Regular";
+	font-size: 14px;
+	font-weight: 400;
 	line-height: 24px;
 }
 .vantage__plane{
@@ -403,21 +420,36 @@ body{
 	font-weight: 700;
 }
 .reviews__photo-1{
+	width: 150px;
+	height: 150px;
     position: absolute;
     top: -125px;
     right: 107px;
 }
 .reviews__photo-2{
+	width: 150px;
+	height: 150px;
     position: absolute;
     top: -125px;
     right: 107px;
 }
 .reviews__photo-3{
+	width: 150px;
+	height: 150px;
     position: absolute;
     top: -125px;
     right: 107px;
 }
-
+.reviews__photo-border{
+	position: absolute;
+	top: -138px;
+    right: 95px;
+}
+.reviews__plane-1{
+	position: absolute;
+	top: -136px;
+    right: 205px;
+}
 .reviews__date{
 	margin-top: 10px;
 	color: #999999;
@@ -533,7 +565,7 @@ body{
 .footer__logo{
 	display: inline-block;
 	}
-.back{
+.wrapper{
 	background: url(../pic/foot.png) no-repeat bottom;
 	height: 1400px;
 }
