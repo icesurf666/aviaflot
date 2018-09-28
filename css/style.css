@@ -198,18 +198,21 @@ body{
 }
 .vantage-items{
 	margin-top: 39px;
-	margin-left: 396px;
+	margin-left: auto;
 }
 .vantage-items{
 	position: relative;
-	/*display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;*/
-	display: inline-block;
+	/*display: inline-block;*/
+	flex-wrap: wrap;
+    width: 775px;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
 }
 .vantage-item,.vantage-item1,.vantage-item2,.vantage-item3,.vantage-item4,.vantage-item5{
-	display: inline-block;
+	/*display: inline-block;*/
 	width: 49%;
+
 	
 }
 .vantage-item2{
@@ -350,9 +353,13 @@ body{
 }
 .icons__list{
 	display: inline-block;
+	width: 54px;
+	height: 54px;
 	margin-right: 20px;
-
-
+	border-radius: 50%;
+}
+.icons__list:hover{
+	box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
 }
 
 .reviews{
